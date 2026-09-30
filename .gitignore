@@ -1,0 +1,8 @@
+work/
+
+*.cr.mti
+*.mpf
+transcript
+*.wlf
+*.vhd.bak
+*.do
