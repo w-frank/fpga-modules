@@ -34,17 +34,17 @@ type sum_2_type is array(0 to 1) of signed(34 downto 0);
 
 signal delayed_signal : delayed_signal_type;
 signal product : product_type;
-signal sum0 : sum_0_type;
-signal sum1 : sum_1_type;
-signal sum2 : sum_2_type;
-signal sum3 : signed(35 downto 0);
+signal sum_0 : sum_0_type;
+signal sum_1 : sum_1_type;
+signal sum_2 : sum_2_type;
+signal sum_3 : signed(35 downto 0);
 
 begin
 
 process(i_clk)
 begin
     if (rising_edge(i_clk)) then
-        delayed_signal(0) <= i_data;
+        delayed_signal(0) <= signed(i_data);
         for i in 1 to 8 loop
             delayed_signal(i) <= delayed_signal(i-1);
         end loop;
