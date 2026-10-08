@@ -95,6 +95,6 @@ begin
     end if;
 end process;
 
-o_data <= sum_3(35) & sum_3(28 downto 14);
+o_data <= std_logic_vector(sum_3(35) & sum_3(28 downto 14));
 
 end behavioural;
